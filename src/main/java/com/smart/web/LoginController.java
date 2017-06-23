@@ -30,7 +30,6 @@ public class LoginController{
 		if (!isValidUser) {
 			return new ModelAndView("login", "error", "用户名或密码错误。");
 		} else {
-			String a = "";
 			User user = userService.findUserByUserName(loginCommand
 					.getUserName());
 			user.setLastIp(request.getLocalAddr());
